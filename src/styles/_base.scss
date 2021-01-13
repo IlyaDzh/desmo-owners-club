@@ -1,0 +1,150 @@
+@import "./variables";
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Proxima Nova", sans-serif;
+    color: $text-primary;
+    background-color: $bg-primary;
+}
+
+body,
+html {
+    overflow-x: hidden;
+}
+
+a {
+    color: $text-secondary;
+    transition: color 0.2s ease;
+    text-decoration: none;
+
+    &:hover {
+        color: darken($text-secondary, 20%);
+        text-decoration: none;
+    }
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    @media #{$md-width} {
+        font-size: 36px;
+    }
+
+    @media #{$sm-width} {
+        font-size: 30px;
+    }
+
+    @media #{$xs-width} {
+        font-size: 24px;
+    }
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 24px;
+    font-weight: 600;
+
+    @media #{$md-width} {
+        font-size: 20px;
+    }
+
+    @media #{$sm-width} {
+        font-size: 16px;
+    }
+
+    @media #{$xs-width} {
+        font-size: 12px;
+    }
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: bold;
+
+    @media #{$sm-width} {
+        font-size: 16px;
+    }
+
+    @media #{$xs-width} {
+        font-size: 12px;
+    }
+}
+
+p {
+    font-size: 18px;
+    line-height: 25px;
+
+    @media #{$md-width} {
+        font-size: 16px;
+        line-height: 23px;
+    }
+
+    @media #{$sm-width} {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    @media #{$xs-width} {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
+
+button {
+    cursor: pointer;
+}
+
+.btn {
+    padding: 18px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    color: $text-primary;
+    border: 1px solid #fff;
+    background: transparent;
+    // min-width: 180px;
+    transition: background 0.25s ease, color 0.25s ease;
+
+    &:hover,
+    &:focus {
+        outline: none;
+        background: #fff;
+        color: $text-black;
+    }
+
+    &:active {
+        background: darken(#fff, 10%);
+    }
+
+    &.btn-fullwidth {
+        width: 100%;
+    }
+
+    @media #{$sm-width} {
+        font-size: 12px;
+        padding: 18px 22px;
+        line-height: 17px;
+    }
+
+    @media #{$xs-width} {
+        font-size: 11px;
+        font-weight: 400;
+        padding: 12px 14px;
+        line-height: 14px;
+    }
+}

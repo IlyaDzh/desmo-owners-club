@@ -1,0 +1,125 @@
+@import "./variables";
+
+.about {
+    padding: 130px 0;
+
+    @media #{$md-width} {
+        padding: 90px 0;
+    }
+
+    @media #{$sm-width} {
+        padding: 50px 0;
+    }
+
+    @media #{$xs-width} {
+        padding: 10px 0;
+    }
+
+    &__section {
+        margin-bottom: 110px;
+
+        @media #{$sm-width} {
+            margin-bottom: 45px;
+        }
+
+        &-images {
+            &>div {
+                &:last-child {
+                    display: none;
+                }
+            }
+
+            @media #{$md-width} {
+                display: flex;
+                margin-bottom: 45px;
+
+                &>div {
+                    &:first-child {
+                        width: 65%;
+                        margin-right: 14px;
+
+                        @media #{$xs-width} {
+                            margin-right: 5px;
+                        }
+                    }
+
+                    &:last-child {
+                        display: block;
+                        width: 35%;
+                    }
+                }
+            }
+
+        }
+
+        &:nth-child(1) {
+            h1 {
+                margin-bottom: 15px;
+            }
+
+            img {
+                margin-top: 70px;
+
+                @media #{$sm-width} {
+                    margin-top: 40px;
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            h4 {
+                margin-bottom: 20px;
+            }
+
+            img {
+                margin-top: 70px;
+
+                @media #{$sm-width} {
+                    margin-top: 45px;
+                }
+
+                @media #{$xs-width} {
+                    margin-top: 40px;
+                }
+            }
+        }
+
+        &:nth-child(3) {
+            img {
+                @media #{$md-width} {
+                    display: none;
+                }
+            }
+        }
+
+        &:nth-child(4) {
+            h5 {
+                margin-bottom: 20px;
+            }
+
+            img {
+                margin-bottom: 60px;
+
+                @media #{$md-width} {
+                    margin-bottom: 0;
+                }
+            }
+
+            .p-margin {
+                @media #{$lg-width} {
+                    margin-bottom: 60px;
+                }
+
+                @media #{$sm-width} {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+
+    &__image {
+        @media #{$md-width} {
+            padding: 0 20px;
+        }
+    }
+}

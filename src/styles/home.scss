@@ -1,0 +1,22 @@
+@import "./variables";
+
+.home {
+    &__top {
+        text-align: center;
+        padding: 100px 0 150px;
+
+        @media #{$sm-width} {
+            padding: 50px 0 75px;
+        }
+
+        @media #{$xs-width} {
+            padding: 10px 0 30px;
+        }
+
+        &-title {}
+
+        &-subtitle {
+            margin-bottom: 37px;
+        }
+    }
+}
