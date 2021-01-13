@@ -8,6 +8,7 @@
     <link rel="preload" href="./fonts/proxima-nova-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="./styles/index.min.css">
     <link rel="stylesheet" href="./styles/home.min.css">
+    <link rel="stylesheet" href="./styles/css/tiny-slider.min.css">
 </head>
 
 <body>
@@ -29,10 +30,10 @@
         <section class="home__about">
             <div class="container">
                 <div class="row home__about-row">
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 col-md-7 col-lg-6">
                         <h2 class="home__about-title">
                             D.O.C — </br>
-                            большое сообщество, объединяющее дукатистов
+                            большое сообщество, объединяющее дукатистов </br>
                             по всему миру
                         </h2>
                         <p class="home__about-description">
@@ -50,16 +51,77 @@
                             Присоединяйтесь к клубу владельцев Desmo и начните делать свою страсть источником гордости!
                         </p>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 col-md-5 col-lg-6">
                         <div class="home__about-image">
                             <picture>
                                 <source
                                     srcSet="./images/home/home-ducati-1.webp 1x, ./images/home/home-ducati-1@2x.webp 2x"
                                     type="image/webp" />
                                 <img src="./images/home/home-ducati-1.jpg"
-                                    srcSet="./images/home/home-ducati-1@2x.jpg 2x" alt="Ducati эмблема" />
+                                    srcSet="./images/home/home-ducati-1@2x.jpg 2x" alt="Красный Ducati" />
                             </picture>
                         </div>
+                    </div>
+                    <div class="col-12  col-sm-10 col-md-11">
+                        <div class="home__about-bottom">
+                            <picture>
+                                <source
+                                    srcSet="./images/home/home-ducati-2.webp 1x, ./images/home/home-ducati-2@2x.webp 2x"
+                                    type="image/webp" />
+                                <img src="./images/home/home-ducati-2.jpg"
+                                    srcSet="./images/home/home-ducati-2@2x.jpg 2x" alt="Черный Ducati" />
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="home__events">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <h2 class="home__events-title">Мероприятия</h2>
+                    </div>
+                    <div class="col-md-7">
+                        <picture>
+                            <source srcSet="./images/home/home-events.webp 1x, ./images/home/home-events@2x.webp 2x"
+                                type="image/webp" />
+                            <img src="./images/home/home-events.jpg" srcSet="./images/home/home-events@2x.jpg 2x"
+                                alt="Ducati Day" />
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="home__gallery">
+            <div class="container">
+                <div id="gallery-slider">
+                    <div>
+                        <picture>
+                            <source
+                                srcSet="./images/home/slider/home-slider-1.webp 1x, ./images/home/slider/home-slider-1@2x.webp 2x"
+                                type="image/webp" />
+                            <img src="./images/home/slider/home-slider-1.jpg"
+                                srcSet="./images/home/slider/home-slider-1@2x.jpg 2x" alt="Салон Ducati №1" />
+                        </picture>
+                    </div>
+                    <div>
+                        <picture>
+                            <source
+                                srcSet="./images/home/slider/home-slider-2.webp 1x, ./images/home/slider/home-slider-2@2x.webp 2x"
+                                type="image/webp" />
+                            <img src="./images/home/slider/home-slider-2.jpg"
+                                srcSet="./images/home/slider/home-slider-2@2x.jpg 2x" alt="Салон Ducati №2" />
+                        </picture>
+                    </div>
+                    <div>
+                        <picture>
+                            <source
+                                srcSet="./images/home/slider/home-slider-3.webp 1x, ./images/home/slider/home-slider-3@2x.webp 2x"
+                                type="image/webp" />
+                            <img src="./images/home/slider/home-slider-3.jpg"
+                                srcSet="./images/home/slider/home-slider-3@2x.jpg 2x" alt="Салон Ducati №3" />
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -68,7 +130,8 @@
 
     {% include "footer.html" %}
 
-    <script src="./scripts/index.min.js"></script>
+    <script src="./scripts/tiny-slider.min.js"></script>
+    <script src="./scripts/home.min.js"></script>
 </body>
 
 </html>

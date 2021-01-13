@@ -96,7 +96,10 @@ const watch = () => {
     gulp.watch("src/**/*.html", gulp.parallel(html, styles));
     gulp.watch("src/styles/**/*.scss", gulp.series(styles));
     gulp.watch("src/scripts/**/*.js", gulp.series(scripts));
-    gulp.watch(["src/fonts/**/*", "src/images/**/*"], gulp.series(copy));
+    gulp.watch(
+        ["src/fonts/**/*", "src/images/**/*", "src/styles/css/*"],
+        gulp.series(copy)
+    );
 };
 
 exports.html = html;
