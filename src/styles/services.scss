@@ -1,0 +1,132 @@
+@import "./variables";
+
+.services {
+    padding-top: 100px;
+
+    @media #{$md-width} {
+        padding-top: 68px;
+    }
+
+    @media #{$sm-width} {
+        padding-top: 36px;
+    }
+
+    @media #{$xs-width} {
+        padding-top: 10px;
+    }
+
+    .service {
+        &__item {
+            display: flex;
+            padding: 40px 0;
+            border-bottom: 1px solid #fff;
+
+            &:first-child {
+                border-top: 1px solid #fff;
+            }
+
+            @media #{$md-width} {
+                display: block;
+            }
+
+            @media #{$xs-width} {
+                padding: 30px 0;
+            }
+        }
+
+        &__img {
+            margin-right: 30px;
+            max-width: 460px;
+            width: 100%;
+
+            @media #{$md-width} {
+                margin-bottom: 30px;
+            }
+
+            @media #{$xs-width} {
+                margin-right: 0;
+            }
+        }
+
+        &__info {
+            width: 100%;
+
+            &-name {
+                font-size: 24px;
+                font-weight: 600;
+                margin-bottom: 8px;
+
+                @media #{$xs-width} {
+                    font-size: 12px;
+                    margin-bottom: 10px;
+                }
+            }
+
+            &-description {
+                font-size: 14px;
+                line-height: 20px;
+                margin-bottom: 25px;
+
+                @media #{$xs-width} {
+                    font-size: 12px;
+                    margin-bottom: 5px;
+                }
+            }
+
+            &-tel {
+                font-size: 14px;
+                color: #afafaf;
+                margin-bottom: 4px;
+
+                @media #{$sm-width} {
+                    margin-bottom: 0;
+                }
+
+                @media #{$xs-width} {
+                    font-size: 12px;
+                    margin-bottom: 30px;
+                }
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+
+        &__btn {
+            display: flex;
+            justify-content: flex-end;
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90px;
+                height: 90px;
+                border: 1px solid #fff;
+                border-radius: 50%;
+                transition: background 0.25s ease;
+
+                &:hover,
+                &:focus {
+                    outline: none;
+                    background-color: #fff;
+
+                    path {
+                        fill: #000;
+                    }
+                }
+
+                &:active {
+                    background: darken(#fff, 10%);
+                    fill: #000;
+                }
+
+                @media #{$xs-width} {
+                    width: 39px;
+                    height: 39px;
+                }
+            }
+        }
+    }
+}

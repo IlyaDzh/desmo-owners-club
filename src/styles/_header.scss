@@ -17,6 +17,28 @@
         }
     }
 
+    &__logo {
+        display: block;
+
+        &:focus {
+            outline: none;
+        }
+
+        @media #{$xs-width} {
+            width: 61px;
+        }
+    }
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+
+    @media #{$xs-width} {
+        justify-content: space-between;
+        margin-top: 2px;
+    }
+
     &__menu {
         &-btn {
             display: none;
@@ -36,30 +58,6 @@
         }
     }
 
-    &__logo {
-        display: block;
-
-        &:focus {
-            outline: none;
-        }
-
-        @media #{$xs-width} {
-            width: 61px;
-        }
-    }
-
-    &__navigation {
-        display: flex;
-        align-items: center;
-
-        @media #{$xs-width} {
-            justify-content: space-between;
-            margin-top: 2px;
-        }
-    }
-}
-
-.navigation {
     &__list {
         display: flex;
         align-items: center;

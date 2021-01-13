@@ -1,18 +1,18 @@
 @import "./variables";
 
 .about {
-    padding: 130px 0;
+    padding-top: 130px;
 
     @media #{$md-width} {
-        padding: 90px 0;
+        padding-top: 90px;
     }
 
     @media #{$sm-width} {
-        padding: 50px 0;
+        padding-top: 50px;
     }
 
     @media #{$xs-width} {
-        padding: 10px 0;
+        padding-top: 10px;
     }
 
     &__section {
