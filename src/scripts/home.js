@@ -69,3 +69,24 @@ window.addEventListener("resize", () => {
         }
     }
 });
+
+const activeEvents = document.querySelectorAll(".events__item");
+activeEvents.forEach(event => {
+    event.addEventListener("click", () => {
+        document
+            .getElementsByClassName("events__item--active")[0]
+            .classList.remove("events__item--active");
+        event.classList.add("events__item--active");
+
+        document
+            .getElementsByClassName("events__item-image--active")[0]
+            .classList.remove("events__item-image--active");
+        document
+            .querySelector(
+                `.events__item-image[data-number="${event.getAttribute(
+                    "data-number"
+                )}"]`
+            )
+            .classList.add("events__item-image--active");
+    });
+});

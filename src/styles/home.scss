@@ -129,8 +129,127 @@
             padding: 20px 0;
         }
 
+        @media #{$xs-width} {
+            padding-bottom: 0;
+        }
+
         &-title {
-            margin-bottom: 15px;
+            margin-bottom: 70px;
+
+            @media #{$sm-width} {
+                margin-bottom: 15px;
+            }
+
+            @media #{$xs-width} {
+                margin-bottom: 20px;
+            }
+        }
+
+        .events {
+            &__list {
+                max-width: 295px;
+
+                @media #{$xs-width} {
+                    max-width: unset;
+                }
+            }
+
+            &__item {
+                cursor: pointer;
+                position: relative;
+                padding: 20px 0;
+
+                @media #{$xs-width} {
+                    padding: 15px 0;
+                }
+
+                &--active {
+                    cursor: auto;
+                    background-color: $bg-primary;
+
+                    .events__item-content {
+                        display: block;
+                    }
+
+                    &::before,
+                    &::after {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        content: "";
+                        background-color: $bg-primary;
+                    }
+
+                    &:before {
+                        left: -100vw;
+                        width: 100vw;
+                    }
+
+                    &:after {
+                        right: -350px;
+                        width: 350px;
+                    }
+                }
+
+                &-header {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding-bottom: 4px;
+
+                    @media #{$xs-width} {
+                        justify-content: unset;
+                    }
+
+                    h6 {
+                        font-size: 16px;
+
+                        @media #{$sm-width} {
+                            font-size: 14px;
+                        }
+
+                        @media #{$xs-width} {
+                            font-size: 12px;
+                            margin-left: 20px;
+                        }
+                    }
+                }
+
+                &-content {
+                    display: none;
+                    padding-top: 20px;
+                    color: $text-secondary;
+                    border-top: 1px solid #fff;
+
+                    img {
+                        display: none;
+
+                        @media #{$xs-width} {
+                            display: block;
+                            padding-top: 15px;
+                        }
+                    }
+                }
+
+                &-image {
+                    display: none;
+                    text-align: right;
+
+                    &--active {
+                        display: block;
+                    }
+                }
+            }
+
+            &__images {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+
+                @media #{$xs-width} {
+                    display: none;
+                }
+            }
         }
     }
 
@@ -299,6 +418,7 @@
 
     &__separate {
         padding: 100px 0;
+        text-align: center;
 
         @media #{$sm-width} {
             padding: 75px 0;
@@ -364,7 +484,7 @@
                 @media #{$sm-width} {
                     margin: 0 22px 14px;
                 }
-    
+
                 @media #{$xs-width} {
                     margin: 0 18px 14px;
                 }
@@ -396,6 +516,20 @@
 
             &__item {
                 margin: 0 15px;
+                overflow: hidden;
+                width: 100%;
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.5s ease;
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                }
             }
 
             @media #{$sm-width} {

@@ -1,0 +1,35 @@
+@import "./variables";
+
+.news {
+    &__inner {
+        padding: 50px 0;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__content {
+        display: flex;
+
+        &-image {
+            margin-right: 40px;
+
+            img {
+                max-width: 500px;
+            }
+        }
+
+        &-description {
+            color: $text-secondary;
+
+            p {
+                margin-bottom: 15px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
