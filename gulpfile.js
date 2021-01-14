@@ -2,7 +2,7 @@ const gulp = require("gulp");
 const nunjucksRender = require("gulp-nunjucks-render");
 const htmlmin = require("gulp-htmlmin");
 const sass = require("gulp-sass");
-const purgecss = require("gulp-purgecss");
+// const purgecss = require("gulp-purgecss");
 const autoprefixer = require("gulp-autoprefixer");
 const rename = require("gulp-rename");
 const terser = require("gulp-terser");
@@ -33,22 +33,24 @@ const html = () => {
 };
 
 const styles = () => {
-    return gulp
-        .src("src/styles/**/*.scss")
-        .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
-        .pipe(
-            purgecss({
-                content: ["src/**/*.html"]
-            })
-        )
-        .pipe(autoprefixer())
-        .pipe(
-            rename({
-                suffix: ".min"
-            })
-        )
-        .pipe(gulp.dest("build/styles"))
-        .pipe(sync.stream());
+    return (
+        gulp
+            .src("src/styles/**/*.scss")
+            .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
+            // .pipe(
+            //     purgecss({
+            //         content: ["src/**/*.html"]
+            //     })
+            // )
+            .pipe(autoprefixer())
+            .pipe(
+                rename({
+                    suffix: ".min"
+                })
+            )
+            .pipe(gulp.dest("build/styles"))
+            .pipe(sync.stream())
+    );
 };
 
 const scripts = () => {
@@ -102,12 +104,18 @@ const watch = () => {
     );
 };
 
+const github = () => {
+    del("docs");
+    return gulp.src(["build"]).pipe(gulp.dest("docs"));
+};
+
 exports.html = html;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.copy = copy;
 exports.server = server;
 exports.watch = watch;
+exports.github = github;
 
 exports.default = gulp.series(
     clear,

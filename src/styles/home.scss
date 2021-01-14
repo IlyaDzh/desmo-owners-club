@@ -1,6 +1,14 @@
 @import "./variables";
 
 .home {
+    .section {
+        &__title {
+            @media #{$sm-width} {
+                font-size: 16px;
+            }
+        }
+    }
+
     &__top {
         text-align: center;
         padding: 100px 0 220px;
@@ -62,7 +70,6 @@
 
             @media #{$sm-width} {
                 margin-bottom: 20px;
-                font-size: 16px;
             }
         }
 
@@ -136,6 +143,280 @@
 
         @media #{$xs-width} {
             padding: 60px 0 30px;
+        }
+
+        .tns-ovh {
+            overflow: visible;
+        }
+    }
+
+    &__news {
+        padding: 100px 0;
+
+        @media #{$sm-width} {
+            padding: 75px 0;
+        }
+
+        @media #{$xs-width} {
+            padding: 30px 0;
+        }
+
+        &-title {
+            margin-bottom: 80px;
+
+            @media #{$sm-width} {
+                margin-bottom: 20px;
+            }
+        }
+
+        .news {
+            @media #{$xs-width} {
+                margin-bottom: 45px;
+            }
+
+            &__image {
+                margin-bottom: 60px;
+
+                @media #{$sm-width} {
+                    margin-bottom: 15px;
+                }
+            }
+
+            &__content {
+                display: flex;
+
+                &-number {
+                    min-width: 61px;
+                    padding-top: 2px;
+                    color: $text-secondary;
+
+                    @media #{$md-width} {
+                        min-width: 33px;
+                    }
+                }
+
+                &-title {
+                    position: relative;
+                    text-transform: uppercase;
+                    margin-bottom: 30px;
+
+                    &::before {
+                        position: absolute;
+                        left: 0;
+                        bottom: -10px;
+                        content: "";
+                        width: 100px;
+                        height: 1px;
+                        background: #fff;
+
+                        @media #{$sm-width} {
+                            bottom: -4px;
+                        }
+
+                        @media #{$xs-width} {
+                            bottom: -2px;
+                        }
+                    }
+
+                    @media #{$sm-width} {
+                        margin-bottom: 12px;
+                    }
+
+                    @media #{$xs-width} {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                &-description {
+                    color: $text-secondary;
+                    font-size: 16px;
+                    margin-bottom: 30px;
+                    max-width: 295px;
+
+                    @media #{$sm-width} {
+                        font-size: 12px;
+                        margin-bottom: 15px;
+                    }
+
+                    @media #{$xs-width} {
+                        margin-bottom: 20px;
+                    }
+                }
+
+                &-link {
+                    @media #{$sm-width} {
+                        font-size: 13px;
+                    }
+
+                    svg {
+                        margin-left: 30px;
+
+                        @media #{$sm-width} {
+                            margin-left: 12px;
+                        }
+                    }
+                }
+            }
+
+            &--hidden {
+                @media #{$xs-width} {
+                    display: none;
+                }
+            }
+        }
+
+        .tns-ovh {
+            overflow: visible;
+        }
+
+        .news-show-all {
+            .news--hidden {
+                display: block;
+            }
+        }
+
+        &-more {
+            display: none;
+            text-align: center;
+
+            button {
+                padding: 10px;
+                background: transparent;
+                color: $text-secondary;
+                font-size: 14px;
+                transition: color 0.2s ease;
+
+                &:hover {
+                    color: darken($text-secondary, 20%);
+                }
+            }
+
+            @media #{$xs-width} {
+                display: block;
+            }
+        }
+    }
+
+    &__separate {
+        padding: 100px 0;
+
+        @media #{$sm-width} {
+            padding: 75px 0;
+        }
+
+        @media #{$xs-width} {
+            padding: 30px 0;
+        }
+    }
+
+    &__partners {
+        margin: 100px 0;
+        background: linear-gradient(90deg, #fff 50%, $bg-primary 50%);
+
+        @media #{$sm-width} {
+            margin: 75px 0;
+        }
+
+        @media #{$xs-width} {
+            margin: 30px 0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding-top: 150px;
+            padding-bottom: 150px;
+
+            @media #{$sm-width} {
+                padding-top: 60px;
+                padding-bottom: 46px;
+            }
+
+            @media #{$xs-width} {
+                padding-top: 25px;
+                padding-bottom: 9px;
+            }
+        }
+
+        &-title {
+            margin-bottom: 60px;
+            text-align: center;
+            color: $text-black;
+
+            @media #{$sm-width} {
+                margin-bottom: 20px;
+            }
+
+            @media #{$xs-width} {
+                margin-bottom: 15px;
+            }
+        }
+
+        .partners {
+            &__list {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            &__item {
+                margin: 0 26px 14px;
+
+                @media #{$sm-width} {
+                    margin: 0 22px 14px;
+                }
+    
+                @media #{$xs-width} {
+                    margin: 0 18px 14px;
+                }
+            }
+        }
+    }
+
+    &__instagram {
+        padding-top: 100px;
+
+        @media #{$sm-width} {
+            padding-top: 75px;
+        }
+
+        @media #{$xs-width} {
+            padding-top: 30px;
+        }
+
+        &-subtitle {
+            color: $text-light;
+            margin-bottom: 26px;
+        }
+
+        .instagram {
+            &__list {
+                display: flex;
+                margin: 0 -15px;
+            }
+
+            &__item {
+                margin: 0 15px;
+            }
+
+            @media #{$sm-width} {
+                &__list {
+                    margin: 0 -8px;
+                }
+
+                &__item {
+                    margin: 0 8px;
+                }
+            }
+
+            @media #{$xs-width} {
+                &__list {
+                    margin: 0 -4px;
+                }
+
+                &__item {
+                    margin: 0 4px;
+                }
+            }
         }
     }
 }
