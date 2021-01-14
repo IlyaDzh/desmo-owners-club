@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Desmo Owners Club - Главная</title>
+    <link rel="preload" href="./fonts/proxima-nova-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="./styles/index.min.css">
+    <link rel="stylesheet" href="./styles/home.min.css">
+    <link rel="stylesheet" href="./styles/css/tiny-slider.min.css">
+</head>
+
+<body>
+    <header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <a href="/" class="header__logo" tabindex="-1">
+                <picture>
+                    <source srcset="./images/logo/logo.webp, ./images/logo/logo@2x.webp 2x" type="image/webp">
+                    <img src="./images/logo/logo.png" srcset="./images/logo/logo@2x.png 2x" alt="Desmo Owners Club лого">
+                </picture>
+            </a>
+            <nav class="navigation">
+                <button id="mobile-menu-btn" class="navigation__mobile-btn">
+                    <svg width="21" height="10" viewBox="0 0 21 10" fill="none">
+                        <path d="M0 0.5H21" stroke="#fff"/>
+                        <path d="M0 5H21" stroke="#fff"/>
+                        <path d="M0 9H15" stroke="#fff"/>
+                    </svg>
+                    Меню
+                </button>
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a href="/">Главная</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="/about.html">О клубе</a>
+                    </li>
+                    
+                    <li class="navigation__item">
+                        <a href="/services.html">Сервисы</a>
+                    </li>
+                </ul>
+                <a href="/instruction.html" class="btn">Стать участником клуба</a>
+            </nav>
+            <ul id="mobile-menu" class="navigation__mobile-menu">
+                <li class="mobile__item">
+                    <a href="/">Главная</a>
+                </li>
+                <li class="mobile__item">
+                    <a href="/about.html">О клубе</a>
+                </li>
+                
+                <li class="mobile__item">
+                    <a href="/services.html">Сервисы</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+    <main class="home">
+        <section class="home__top">
+            <div class="container">
+                <h1 class="home__top-title">Desmo Owners Club</h1>
+                <h3 class="home__top-subtitle">St.Petersburg</h3>
+                <picture>
+                    <source srcset="./images/home/home-top.webp, ./images/home/home-top@2x.webp 2x" type="image/webp">
+                    <img src="./images/home/home-top.jpg" srcset="./images/home/home-top@2x.jpg 2x" alt="Ducati эмблема">
+                </picture>
+            </div>
+        </section>
+
+        <section class="home__about">
+            <div class="container">
+                <div class="row home__about-row">
+                    <div class="col-sm-6 col-md-7 col-lg-6">
+                        <h2 class="section__title home__about-title">
+                            D.O.C — <br>
+                            большое сообщество, объединяющее дукатистов <br>
+                            по всему миру
+                        </h2>
+                        <p class="home__about-description">
+                            Международные развлекательные мероприятия, выставки, презентации, розыгрыши, гонки, тест
+                            райды и курсы повышения мастерства на лучших мировых треках.
+                        </p>
+                        <p class="home__about-description">
+                            Помощь каждому и поддержка в любой стране мира, поездки в гости к другим клубам, общение и
+                            расширение границ каждого мембера, это ducati, ducati и еще раз ducati и люди, которые как и
+                            Вы разделяет эту страсть и цвета Борго Панигале, чтобы окрасить в них свои дни.
+                        </p>
+                        <p class="home__about-description">
+                            Присоединяйтесь к клубу владельцев Desmo и начните делать свою страсть источником гордости!
+                        </p>
+                    </div>
+                    <div class="col-sm-6 col-md-5 col-lg-6">
+                        <div class="home__about-image">
+                            <picture>
+                                <source srcset="./images/home/home-ducati-1.webp, ./images/home/home-ducati-1@2x.webp 2x" type="image/webp">
+                                <img src="./images/home/home-ducati-1.jpg" srcset="./images/home/home-ducati-1@2x.jpg 2x" alt="Красный Ducati">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-10 col-md-11">
+                        <div class="home__about-bottom">
+                            <picture>
+                                <source srcset="./images/home/home-ducati-2.webp, ./images/home/home-ducati-2@2x.webp 2x" type="image/webp">
+                                <img src="./images/home/home-ducati-2.jpg" srcset="./images/home/home-ducati-2@2x.jpg 2x" alt="Черный Ducati">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="home__events">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <h2 class="section__title home__events-title">Мероприятия</h2>
+                    </div>
+                    <div class="col-md-7">
+                        <picture>
+                            <source srcset="./images/home/events/events.webp, ./images/home/events/events@2x.webp 2x" type="image/webp">
+                            <img src="./images/home/events/events.jpg" srcset="./images/home/events/events@2x.jpg 2x" alt="Ducati Day">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="home__gallery">
+            <div class="container">
+                <h2 class="visually-hidden">Галерея</h2>
+                <div id="gallery-slider">
+                    <div>
+                        <picture>
+                            <source srcset="./images/home/gallery/gallery-1.webp, ./images/home/gallery/gallery-1@2x.webp 2x" type="image/webp">
+                            <img src="./images/home/gallery/gallery-1.jpg" srcset="./images/home/gallery/gallery-1@2x.jpg 2x" alt="Салон Ducati №1">
+                        </picture>
+                    </div>
+                    <div>
+                        <picture>
+                            <source srcset="./images/home/gallery/gallery-2.webp, ./images/home/gallery/gallery-2@2x.webp 2x" type="image/webp">
+                            <img src="./images/home/gallery/gallery-2.jpg" srcset="./images/home/gallery/gallery-2@2x.jpg 2x" alt="Салон Ducati №2">
+                        </picture>
+                    </div>
+                    <div>
+                        <picture>
+                            <source srcset="./images/home/gallery/gallery-3.webp, ./images/home/gallery/gallery-3@2x.webp 2x" type="image/webp">
+                            <img src="./images/home/gallery/gallery-3.jpg" srcset="./images/home/gallery/gallery-3@2x.jpg 2x" alt="Салон Ducati №3">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="home__news">
+            <div class="container">
+                <h2 class="section__title home__news-title">Новости</h2>
+                <div id="news-slider" class="home__news-slider">
+                    <div class="news">
+                        <div class="news__image">
+                            <picture>
+                                <source srcset="./images/home/news/news-1.webp, ./images/home/news/news-1@2x.webp 2x" type="image/webp">
+                                <img src="./images/home/news/news-1.jpg" srcset="./images/home/news/news-1@2x.jpg 2x" alt="V4 Granturismo">
+                            </picture>
+                        </div>
+                        <div class="news__content">
+                            <div class="news__content-number">
+                                <h6>01</h6>
+                            </div>
+                            <div>
+                                <h3 class="news__content-title">V4 Granturismo</h3>
+                                <p class="news__content-description">
+                                    Ducati представляет новый двигатель V4 Granturismo. <br>
+                                    Он будет работать на новом Multistrada V4, который будет представлен 4 ноября.
+                                </p>
+                                <div class="news__content-link">
+                                    <a href="#">
+                                        Подробнее
+                                        <svg width="32" height="8" viewBox="0 0 32 8" fill="none">
+                                            <path d="M31.3536 4.35355C31.5488 4.15829 31.5488 3.84171 31.3536 3.64645L28.1716 0.464466C27.9763 0.269204 27.6597 0.269204 27.4645 0.464466C27.2692 0.659728 27.2692 0.976311 27.4645 1.17157L30.2929 4L27.4645 6.82843C27.2692 7.02369 27.2692 7.34027 27.4645 7.53553C27.6597 7.7308 27.9763 7.7308 28.1716 7.53553L31.3536 4.35355ZM0 4.5H31V3.5H0V4.5Z" fill="#fff"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news">
+                        <div class="news__image">
+                            <picture>
+                                <source srcset="./images/home/news/news-2.webp, ./images/home/news/news-2@2x.webp 2x" type="image/webp">
+                                <img src="./images/home/news/news-2.jpg" srcset="./images/home/news/news-2@2x.jpg 2x" alt="Ducati Corse 2020">
+                            </picture>
+                        </div>
+                        <div class="news__content">
+                            <div class="news__content-number">
+                                <h6>02</h6>
+                            </div>
+                            <div>
+                                <h3 class="news__content-title">Ducati Corse 2020</h3>
+                                <p class="news__content-description">
+                                    Оживите самые захватывающие моменты сезона 2020 года и гоночные подвиги Андреа
+                                    Довициозо, Данило Петруччи, Скотта Реддинга и Чаза Дэвиса.
+                                </p>
+                                <div class="news__content-link">
+                                    <a href="#">
+                                        Подробнее
+                                        <svg width="32" height="8" viewBox="0 0 32 8" fill="none">
+                                            <path d="M31.3536 4.35355C31.5488 4.15829 31.5488 3.84171 31.3536 3.64645L28.1716 0.464466C27.9763 0.269204 27.6597 0.269204 27.4645 0.464466C27.2692 0.659728 27.2692 0.976311 27.4645 1.17157L30.2929 4L27.4645 6.82843C27.2692 7.02369 27.2692 7.34027 27.4645 7.53553C27.6597 7.7308 27.9763 7.7308 28.1716 7.53553L31.3536 4.35355ZM0 4.5H31V3.5H0V4.5Z" fill="#fff"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news news--hidden">
+                        <div class="news__image">
+                            <picture>
+                                <source srcset="./images/home/news/news-1.webp, ./images/home/news/news-1@2x.webp 2x" type="image/webp">
+                                <img src="./images/home/news/news-1.jpg" srcset="./images/home/news/news-1@2x.jpg 2x" alt="V4 Granturismo">
+                            </picture>
+                        </div>
+                        <div class="news__content">
+                            <div class="news__content-number">
+                                <h6>03</h6>
+                            </div>
+                            <div>
+                                <h3 class="news__content-title">V4 Granturismo</h3>
+                                <p class="news__content-description">
+                                    Ducati представляет новый двигатель V4 Granturismo. <br>
+                                    Он будет работать на новом Multistrada V4, который будет представлен 4 ноября.
+                                </p>
+                                <div class="news__content-link">
+                                    <a href="#">
+                                        Подробнее
+                                        <svg width="32" height="8" viewBox="0 0 32 8" fill="none">
+                                            <path d="M31.3536 4.35355C31.5488 4.15829 31.5488 3.84171 31.3536 3.64645L28.1716 0.464466C27.9763 0.269204 27.6597 0.269204 27.4645 0.464466C27.2692 0.659728 27.2692 0.976311 27.4645 1.17157L30.2929 4L27.4645 6.82843C27.2692 7.02369 27.2692 7.34027 27.4645 7.53553C27.6597 7.7308 27.9763 7.7308 28.1716 7.53553L31.3536 4.35355ZM0 4.5H31V3.5H0V4.5Z" fill="#fff"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="home__news-more">
+                    <button>Открыть ещё</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="home__separate">
+            <picture>
+                <source srcset="./images/home/separate.webp, ./images/home/separate@2x.webp 2x" type="image/webp">
+                <img src="./images/home/separate.png" srcset="./images/home/separate@2x.png 2x" alt="DUCATI">
+            </picture>
+        </div>
+
+        <section class="home__partners">
+            <div class="container">
+                <h2 class="section__title home__partners-title">Партнеры</h2>
+                <div class="partners__list">
+                    <div class="partners__item">
+                        <picture>
+                            <source srcset="./images/home/partners/partner-1-mobile.png, ./images/home/partners/partner-1-mobile@2x.png 2x" media="(max-width: 639px)">
+                            <img src="./images/home/partners/partner-1.png" srcset="./images/home/partners/partner-1@2x.png 2x" alt="ВАГНЕР DUCATI">
+                        </picture>
+                    </div>
+                    <div class="partners__item">
+                        <picture>
+                            <source srcset="./images/home/partners/partner-2-mobile.png, ./images/home/partners/partner-2-mobile@2x.png 2x" media="(max-width: 639px)">
+                            <img src="./images/home/partners/partner-2.png" srcset="./images/home/partners/partner-2@2x.png 2x" alt="PIRELLI">
+                        </picture>
+                    </div>
+                    <div class="partners__item">
+                        <picture>
+                            <source srcset="./images/home/partners/partner-3-mobile.png, ./images/home/partners/partner-3-mobile@2x.png 2x" media="(max-width: 639px)">
+                            <img src="./images/home/partners/partner-3.png" srcset="./images/home/partners/partner-3@2x.png 2x" alt="KINGWINCH">
+                        </picture>
+                    </div>
+                    <div class="partners__item">
+                        <picture>
+                            <source srcset="./images/home/partners/partner-4-mobile.png, ./images/home/partners/partner-4-mobile@2x.png 2x" media="(max-width: 639px)">
+                            <img src="./images/home/partners/partner-4.png" srcset="./images/home/partners/partner-4@2x.png 2x" alt="SHAMPURS.RU">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="home__instagram">
+            <div class="container">
+                <h2 class="section__title">Instagram</h2>
+                <h3 class="home__instagram-subtitle">@ducati.spb.ru</h3>
+                <div class="instagram__list">
+                    <div class="instagram__item">
+                        <picture>
+                            <source srcset="./images/home/instagram/instagram-1.webp, ./images/home/instagram/instagram-1@2x.webp 2x" type="image/webp">
+                            <img src="./images/home/instagram/instagram-1.jpg" srcset="./images/home/instagram/instagram-1@2x.jpg 2x" alt="V4 Granturismo">
+                        </picture>
+                    </div>
+                    <div class="instagram__item">
+                        <picture>
+                            <source srcset="./images/home/instagram/instagram-2.webp, ./images/home/instagram/instagram-2@2x.webp 2x" type="image/webp">
+                            <img src="./images/home/instagram/instagram-2.jpg" srcset="./images/home/instagram/instagram-2@2x.jpg 2x" alt="V4 Granturismo">
+                        </picture>
+                    </div>
+                    <div class="instagram__item">
+                        <picture>
+                            <source srcset="./images/home/instagram/instagram-3.webp, ./images/home/instagram/instagram-3@2x.webp 2x" type="image/webp">
+                            <img src="./images/home/instagram/instagram-3.jpg" srcset="./images/home/instagram/instagram-3@2x.jpg 2x" alt="V4 Granturismo">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="footer__form">
+                    <h3 class="footer__form-title">Стань партнером клуба</h3>
+                    <form action="" method="POST">
+                        <div class="inputbox">
+                            <input type="text" placeholder="Email">
+                        </div>
+                        <div class="inputbox">
+                            <input type="text" placeholder="Телефон">
+                        </div>
+                        <div class="inputbox">
+                            <input type="text" placeholder="Сообщение">
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="consent">
+                            <label for="consent">Согласие на обработку персональных данных</label>
+                        </div>
+                        <button class="btn footer__form-btn" type="button" class="btn">Отправить</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="footer__title">DOC</div>
+                <div class="footer__info">
+                    <ul>
+                        <li>
+                            <a href="/">Главная</a>
+                        </li>
+                        <li>
+                            <a href="/about.html">О клубе</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/services.html">Сервисы</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>Контакты</li>
+                        <li>
+                            <h6>Президент клуба</h6>
+                            Кирилл Свердлов
+                        </li>
+                        <li>
+                            <a href="tel:7799999000">+ 77 99 999 000</a>
+                        </li>
+                        <li>
+                            <a href="mailto:ducati@cliub.ru" class="footer__email">ducati@cliub.ru</a>
+                        </li>
+                        <li>
+                            <div class="footer__social">
+                                <a href="#" class="footer__social-item" target="_blank" rel="noopener noreferrer">
+                                    <img src="./images/social/facebook.png" alt="Facebook">
+                                </a>
+                                <a href="#" class="footer__social-item" target="_blank" rel="noopener noreferrer">
+                                    <img src="./images/social/instagram.png" alt="Instagram">
+                                </a>
+                                <a href="#" class="footer__social-item" target="_blank" rel="noopener noreferrer">
+                                    <img src="./images/social/vk.png" alt="VK">
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="footer__authors">
+                    <h6>Make-over for Andrey Morozov</h6>
+                    <h6>Design for AnnDugssa</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="./scripts/tiny-slider.min.js"></script>
+    <script src="./scripts/home.min.js"></script>
+    <script src="./scripts/index.min.js"></script>
+</body>
+
+</html>

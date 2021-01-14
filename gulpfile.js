@@ -104,18 +104,12 @@ const watch = () => {
     );
 };
 
-const github = () => {
-    del("docs");
-    return gulp.src(["build"]).pipe(gulp.dest("docs"));
-};
-
 exports.html = html;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.copy = copy;
 exports.server = server;
 exports.watch = watch;
-exports.github = github;
 
 exports.default = gulp.series(
     clear,
