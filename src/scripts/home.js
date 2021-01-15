@@ -114,7 +114,9 @@ fetch(
             if (index < 3) {
                 instagramList.innerHTML += `
                     <div class="instagram__item">
-                        <img src="${edge.node.thumbnail_src}" width="150">
+                        <a href="https://instagr.am/p/${edge.node.shortcode}" target="_blank" rel="noopener noreferrer">
+                            <img src="${edge.node.thumbnail_src}" width="150">
+                        </a>
                     </div>
                 `;
             }
