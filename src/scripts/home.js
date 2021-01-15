@@ -44,10 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (window.innerWidth > 640) {
         newsSlider = tns(newsSliderConfig);
     } else {
-        const newsSliderElement = document.getElementsByClassName(
-            "home__news-slider"
-        )[0];
-        const showMoreBtn = document.querySelector(".home__news-more button");
+        const newsSliderElement = document.getElementsByClassName("news__slider")[0];
+        const showMoreBtn = document.querySelector(".news__more button");
         showMoreBtn.addEventListener("click", () => {
             showMoreBtn.innerHTML =
                 showMoreBtn.innerHTML === "Открыть ещё" ? "Скрыть" : "Открыть ещё";
@@ -74,24 +72,22 @@ window.addEventListener("resize", () => {
 
 // EVENTS
 
-const activeEvents = document.querySelectorAll(".events__item");
+const activeEvents = document.querySelectorAll(".event__item");
 activeEvents.forEach(event => {
     event.addEventListener("click", () => {
         document
-            .getElementsByClassName("events__item--active")[0]
-            .classList.remove("events__item--active");
-        event.classList.add("events__item--active");
+            .getElementsByClassName("event__item--active")[0]
+            .classList.remove("event__item--active");
+        event.classList.add("event__item--active");
 
         document
-            .getElementsByClassName("events__item-image--active")[0]
-            .classList.remove("events__item-image--active");
+            .getElementsByClassName("event__image--active")[0]
+            .classList.remove("event__image--active");
         document
             .querySelector(
-                `.events__item-image[data-number="${event.getAttribute(
-                    "data-number"
-                )}"]`
+                `.event__image[data-number="${event.getAttribute("data-number")}"]`
             )
-            .classList.add("events__item-image--active");
+            .classList.add("event__image--active");
     });
 });
 
