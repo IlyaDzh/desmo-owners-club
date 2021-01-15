@@ -97,6 +97,7 @@ activeEvents.forEach(event => {
 
 // INSTAGRAM
 const instagramList = document.getElementsByClassName("instagram__list")[0];
+const instagramLoader = document.getElementsByClassName("instagram__loader")[0];
 
 fetch(
     `https://images${~~(
@@ -115,10 +116,11 @@ fetch(
                 instagramList.innerHTML += `
                     <div class="instagram__item">
                         <a href="https://instagr.am/p/${edge.node.shortcode}" target="_blank" rel="noopener noreferrer">
-                            <img src="${edge.node.thumbnail_src}" width="150">
+                            <img src="${edge.node.thumbnail_src}" alt="${edge.node.accessibility_caption}">
                         </a>
                     </div>
                 `;
             }
         });
+        instagramLoader.classList.add("instagram__loader--hide");
     });
