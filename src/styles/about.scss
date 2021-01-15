@@ -118,6 +118,8 @@
     }
 
     &__image {
+        text-align: center;
+        
         @media #{$md-width} {
             padding: 0 20px;
         }
