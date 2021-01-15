@@ -422,6 +422,10 @@
         padding: 100px 0;
         text-align: center;
 
+        img {
+            width: 100%;
+        }
+
         @media #{$sm-width} {
             padding: 75px 0;
         }
