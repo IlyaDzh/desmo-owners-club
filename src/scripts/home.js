@@ -1,3 +1,5 @@
+// SLIDERS
+
 const gallerySlider = tns({
     container: "#gallery-slider",
     gutter: 6,
@@ -70,6 +72,8 @@ window.addEventListener("resize", () => {
     }
 });
 
+// EVENTS
+
 const activeEvents = document.querySelectorAll(".events__item");
 activeEvents.forEach(event => {
     event.addEventListener("click", () => {
@@ -90,3 +94,29 @@ activeEvents.forEach(event => {
             .classList.add("events__item-image--active");
     });
 });
+
+// INSTAGRAM
+const instagramList = document.getElementsByClassName("instagram__list")[0];
+
+fetch(
+    `https://images${~~(
+        Math.random() * 33
+    )}-focus-opensocial.googleusercontent.com/gadgets/proxy?container=none&url=https://www.instagram.com/ducati.spb.ru`
+)
+    .then(res => res.text())
+    .then(data => {
+        const regex = /_sharedData = ({.*);<\/script>/m;
+        const json = JSON.parse(regex.exec(data)[1]);
+        const edges =
+            json.entry_data.ProfilePage[0].graphql.user.edge_owner_to_timeline_media
+                .edges;
+        edges.forEach((edge, index) => {
+            if (index < 3) {
+                instagramList.innerHTML += `
+                    <div class="instagram__item">
+                        <img src="${edge.node.thumbnail_src}" width="150">
+                    </div>
+                `;
+            }
+        });
+    });
