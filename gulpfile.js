@@ -55,7 +55,7 @@ const styles = () => {
 
 const scripts = () => {
     return gulp
-        .src("src/scripts/**/*.js")
+        .src(["src/scripts/**/*.js", "!src/scripts/lib/*.js"])
         .pipe(
             babel({
                 presets: ["@babel/preset-env"]
@@ -73,9 +73,17 @@ const scripts = () => {
 
 const copy = () => {
     return gulp
-        .src(["src/fonts/**/*", "src/images/**/*", "src/styles/css/*"], {
-            base: "src"
-        })
+        .src(
+            [
+                "src/fonts/**/*",
+                "src/images/**/*",
+                "src/styles/css/*",
+                "src/scripts/lib/*.js"
+            ],
+            {
+                base: "src"
+            }
+        )
         .pipe(gulp.dest("build"))
         .pipe(
             sync.stream({
@@ -97,9 +105,17 @@ const server = () => {
 const watch = () => {
     gulp.watch("src/**/*.html", gulp.parallel(html, styles));
     gulp.watch("src/styles/**/*.scss", gulp.series(styles));
-    gulp.watch("src/scripts/**/*.js", gulp.series(scripts));
     gulp.watch(
-        ["src/fonts/**/*", "src/images/**/*", "src/styles/css/*"],
+        ["src/scripts/**/*.js", "!src/scripts/lib/*.js"],
+        gulp.series(scripts)
+    );
+    gulp.watch(
+        [
+            "src/fonts/**/*",
+            "src/images/**/*",
+            "src/styles/css/*",
+            "src/scripts/lib/*.js"
+        ],
         gulp.series(copy)
     );
 };

@@ -4,45 +4,4 @@
     &__inner {
         padding: 50px 0;
     }
-
-    &__title {
-        margin-bottom: 40px;
-    }
-
-    &__content {
-        display: flex;
-
-        @media #{$md-width} {
-            display: block;
-        }
-
-        &-image {
-            margin-right: 40px;
-
-            img {
-                max-width: 500px;
-
-                @media #{$xs-width} {
-                    width: 100%;
-                }
-            }
-
-            @media #{$md-width} {
-                margin-right: 0;
-                margin-bottom: 15px;
-            }
-        }
-
-        &-description {
-            color: $text-secondary;
-
-            p {
-                margin-bottom: 15px;
-
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
-        }
-    }
 }
