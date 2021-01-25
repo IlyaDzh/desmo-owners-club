@@ -119,41 +119,50 @@ button {
 }
 
 .btn {
-    padding: 18px 24px;
     font-size: 16px;
     font-weight: 600;
     line-height: 22px;
-    color: $text-primary;
     border: 1px solid #fff;
-    background: transparent;
+    border-radius: 0;
+    padding: 18px 24px;
     transition: background 0.25s ease, color 0.25s ease;
 
-    &:hover,
-    &:focus {
-        outline: none;
-        background: #fff;
-        color: $text-black;
-    }
+    &-primary {
+        color: $text-primary;
+        background: transparent;
 
-    &:active {
-        background: darken(#fff, 10%);
-    }
+        &:hover,
+        &:focus {
+            outline: none;
+            background: #fff;
+            color: $text-black;
+            border-color: #fff;
+        }
 
-    &.btn-fullwidth {
-        width: 100%;
+        &:not(:disabled):not(.disabled):active:focus,
+        &:focus {
+            box-shadow: none;
+        }
+
+        &:not(:disabled):not(.disabled):active {
+            color: $text-black;
+            background-color: darken(#fff, 10%);
+            border-color: darken(#fff, 10%);
+            box-shadow: none;
+        }
     }
 
     @media #{$sm-width} {
         font-size: 12px;
-        padding: 18px 22px;
         line-height: 17px;
+        padding: 18px 22px;
     }
 
     @media #{$xs-width} {
         font-size: 11px;
         font-weight: 400;
-        padding: 12px 14px;
         line-height: 14px;
+        padding: 12px 14px;
     }
 }
 
